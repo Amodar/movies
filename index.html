@@ -4,20 +4,11 @@
   <script src="https://code.jquery.com/jquery-1.11.2.min.js" defer></script>
 </head>
 <body>
-  
-<script>
-  $.getJSON("http://amodar.github.io/movies/movies.json", function( data ) {
-    var items = [];
-    $.each( data, function( key, val ) {
-      items.push( "<li id='" + key + "'>" + val + "</li>" );
+  <script>
+    $.getJSON("http://amodar.github.io/movies/movies.json", function( data ) {
+        document.getElementById("test").innerHTML = data.[0].Director;
     });
-   
-    $( "<ul/>", {
-      "class": "my-new-list",
-      html: items.join( "" )
-    }).appendTo( "body" );
-  });
-</script>
-
+  </script>
+<div id='test'></div>
 </body>
 </html>
