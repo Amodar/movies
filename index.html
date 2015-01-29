@@ -1,16 +1,20 @@
 <!DOCTYPE>
 <html>
 <head>
-</head>
-<body>
+
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script>
+  (function() {
     $.getJSON("http://amodar.github.io/movies/movies.json", function( data ) {
         document.getElementById("test").innerHTML = data[0].Director;
-        document.getElementById("test").innerHTML = data[0].Director;
     });
+  }());
   </script>
+
+</head>
+<body>
+  
 <div id='test'></div>
 
-<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 </body>
 </html>
