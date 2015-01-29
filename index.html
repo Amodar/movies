@@ -5,8 +5,11 @@
   <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script>
   (function() {
-    $.getJSON("http://amodar.github.io/movies/movies.json", function( data ) {
-        document.getElementById("test").innerHTML = data[0].Director;
+    $.getJSON("http://amodar.github.io/movies/movies.json", function( movie ) {
+        var x = movie.length;
+        
+        document.getElementById("test").innerHTML += movie[0].Director;
+        document.getElementById("x").innerHTML += movie[0].Director;
     });
   }());
   </script>
