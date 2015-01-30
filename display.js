@@ -1,5 +1,5 @@
 (function () {
-    $.getJSON("http://broowse.com/movies.json", function (movie) {
+    $.getJSON("http://amodar.github.io/movies/filteredMovies.json", function (movie) {
         var limitMovies = [];
         var totalMovies = 15;
         
