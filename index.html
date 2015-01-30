@@ -12,11 +12,12 @@
         for (var i = 0; i<movie.length; i++) {
             movies.push(movie[i]);
         }
-        movies.filter( function (e) {
-          return e.Poster === "N/A";
+
+        var filteredMovies = movies.filter( function (object) {
+          return object.Poster === "N/A";
         });
-        document.getElementById("x").innerHTML += movies.length;
-        document.getElementById("test").innerHTML = movies[0].Poster;
+
+        document.getElementById("x").innerHTML = filteredMovies.length;
     });
   }());
   </script>
