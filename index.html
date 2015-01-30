@@ -15,9 +15,8 @@
         var filteredMovies = movies.filter( function (object) {
           return object.Poster !== "N/A";
         });
-        var x = JSON.parse(filteredMovies);
-        document.body.innerHTML = "";
-        document.body.appendChild(document.createTextNode(JSON.stringify(x, null, 4)));
+        
+        document.body.appendChild(document.createTextNode(JSON.stringify(filteredMovies, null, 4)));
     });
   }());
   </script>
