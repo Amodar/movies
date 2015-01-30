@@ -14,7 +14,7 @@
         }
 
         var filteredMovies = movies.filter( function (object) {
-          return object.Poster === "N/A";
+          return object.Poster !== "N/A";
         });
 
         document.getElementById("x").innerHTML = filteredMovies.length;
