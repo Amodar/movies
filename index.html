@@ -16,7 +16,7 @@
           return object.Poster !== "N/A";
         });
         
-        document.getElementById("main").innerHTML = JSON.stringify(filteredMovies, null, "\t");
+        document.body.appendChild(document.createTextNode(JSON.stringify(filteredMovies, null, "\t")));
     });
   }());
   </script>
