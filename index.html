@@ -8,7 +8,6 @@
     $.getJSON("http://amodar.github.io/movies/movies.json", function( movie ) {
         var movies = [];
         
-        
         for (var i = 0; i<movie.length; i++) {
             movies.push(movie[i]);
         }
@@ -16,10 +15,8 @@
         var filteredMovies = movies.filter( function (object) {
           return object.Poster !== "N/A";
         });
-
-        document.getElementById("x").innerHTML = filteredMovies.length;
         
-        document.getElementById("test").innerHTML = JSON.stringify(filteredMovies, null, 4);
+        document.getElementById("main").innerHTML = JSON.stringify(filteredMovies, null, 4);
     });
   }());
   </script>
@@ -27,8 +24,7 @@
 </head>
 <body>
   
-<div id='test'></div>
-<div id='x'></div>
+  <div id='main'></div>
 
 </body>
 </html>
