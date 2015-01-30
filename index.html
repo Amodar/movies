@@ -12,11 +12,11 @@
             movies.push(movie[i]);
         }
 
-        var filteredMovies = movies.filter( function (object) {
+        return filteredMovies = movies.filter( function (object) {
           return object.Poster !== "N/A";
         });
         
-        document.body.appendChild(document.createTextNode(JSON.stringify(filteredMovies, null, 4)));
+        //document.body.appendChild(document.createTextNode(JSON.stringify(filteredMovies, null, 4)));
     });
   }());
   </script>
