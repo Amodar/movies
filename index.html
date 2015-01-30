@@ -6,8 +6,13 @@
   <script>
   (function() {
     $.getJSON("http://amodar.github.io/movies/movies.json", function( movie ) {
-        var x = movie.length;
+        var movies = [];
         
+        
+        for (var i = 0; i<movie.length; i++) {
+            movies.push(movie);
+        }
+       
         document.getElementById("test").innerHTML = movie[0].Director;
         document.getElementById("x").innerHTML = movie.length;
     });
