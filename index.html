@@ -13,8 +13,11 @@
             movies.push(movie[i]);
             document.getElementById("x").innerHTML += movies[i].Poster;
         }
-       
-        document.getElementById("test").innerHTML = movie[0].Director;
+        movies.filter( function (e) {
+          return e.Poster === "N/A";
+        });
+        document.getElementById("x").innerHTML += movies.length;
+        document.getElementById("test").innerHTML = movies[0].Poster;
     });
   }());
   </script>
